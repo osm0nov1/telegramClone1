@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F68D316D1DEE15FBBAF2702 /* Pods_telegramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61CF642B9174751E2EA8003 /* Pods_telegramClone.framework */; };
+		C07FD6B027B66A880035600D /* mineControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07FD6AF27B66A880035600D /* mineControler.swift */; };
+		C07FD6B227B66A9F0035600D /* register.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07FD6B127B66A9F0035600D /* register.swift */; };
+		C07FD6B427B66ABC0035600D /* forgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07FD6B327B66ABC0035600D /* forgetPassword.swift */; };
+		C07FD6B627B66AD90035600D /* infoFromLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07FD6B527B66AD90035600D /* infoFromLogin.swift */; };
+		C07FD6B827B66AF70035600D /* help.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07FD6B727B66AF70035600D /* help.swift */; };
 		C0C49CE127B4F1C500A92FBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C49CE027B4F1C500A92FBF /* AppDelegate.swift */; };
 		C0C49CE327B4F1C500A92FBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C49CE227B4F1C500A92FBF /* SceneDelegate.swift */; };
 		C0C49CE527B4F1C500A92FBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C49CE427B4F1C500A92FBF /* ViewController.swift */; };
@@ -16,6 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40C8EBD6473C17A98C2EB704 /* Pods-telegramClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-telegramClone.debug.xcconfig"; path = "Target Support Files/Pods-telegramClone/Pods-telegramClone.debug.xcconfig"; sourceTree = "<group>"; };
+		51E9531A45DCA5346BBEA9E8 /* Pods-telegramClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-telegramClone.release.xcconfig"; path = "Target Support Files/Pods-telegramClone/Pods-telegramClone.release.xcconfig"; sourceTree = "<group>"; };
+		C07FD6AF27B66A880035600D /* mineControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mineControler.swift; sourceTree = "<group>"; };
+		C07FD6B127B66A9F0035600D /* register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = register.swift; sourceTree = "<group>"; };
+		C07FD6B327B66ABC0035600D /* forgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgetPassword.swift; sourceTree = "<group>"; };
+		C07FD6B527B66AD90035600D /* infoFromLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoFromLogin.swift; sourceTree = "<group>"; };
+		C07FD6B727B66AF70035600D /* help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = help.swift; sourceTree = "<group>"; };
 		C0C49CDD27B4F1C500A92FBF /* telegramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = telegramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C49CE027B4F1C500A92FBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0C49CE227B4F1C500A92FBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +37,7 @@
 		C0C49CE927B4F1C500A92FBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0C49CEC27B4F1C500A92FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0C49CEE27B4F1C500A92FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E61CF642B9174751E2EA8003 /* Pods_telegramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_telegramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F68D316D1DEE15FBBAF2702 /* Pods_telegramClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC88EE2711E59BD2F647B5DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40C8EBD6473C17A98C2EB704 /* Pods-telegramClone.debug.xcconfig */,
+				51E9531A45DCA5346BBEA9E8 /* Pods-telegramClone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C0C49CD427B4F1C500A92FBF = {
 			isa = PBXGroup;
 			children = (
 				C0C49CDF27B4F1C500A92FBF /* telegramClone */,
 				C0C49CDE27B4F1C500A92FBF /* Products */,
+				BC88EE2711E59BD2F647B5DA /* Pods */,
+				F0BA393C89E7F7FFB8BC3F5B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +85,25 @@
 				C0C49CE027B4F1C500A92FBF /* AppDelegate.swift */,
 				C0C49CE227B4F1C500A92FBF /* SceneDelegate.swift */,
 				C0C49CE427B4F1C500A92FBF /* ViewController.swift */,
+				C07FD6AF27B66A880035600D /* mineControler.swift */,
+				C07FD6B127B66A9F0035600D /* register.swift */,
+				C07FD6B327B66ABC0035600D /* forgetPassword.swift */,
+				C07FD6B527B66AD90035600D /* infoFromLogin.swift */,
+				C07FD6B727B66AF70035600D /* help.swift */,
 				C0C49CE627B4F1C500A92FBF /* Main.storyboard */,
 				C0C49CE927B4F1C500A92FBF /* Assets.xcassets */,
 				C0C49CEB27B4F1C500A92FBF /* LaunchScreen.storyboard */,
 				C0C49CEE27B4F1C500A92FBF /* Info.plist */,
 			);
 			path = telegramClone;
+			sourceTree = "<group>";
+		};
+		F0BA393C89E7F7FFB8BC3F5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E61CF642B9174751E2EA8003 /* Pods_telegramClone.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0C49CF127B4F1C500A92FBF /* Build configuration list for PBXNativeTarget "telegramClone" */;
 			buildPhases = (
+				741AC15E29F09CAFA545405E /* [CP] Check Pods Manifest.lock */,
 				C0C49CD927B4F1C500A92FBF /* Sources */,
 				C0C49CDA27B4F1C500A92FBF /* Frameworks */,
 				C0C49CDB27B4F1C500A92FBF /* Resources */,
+				E4711CE7857A43715D9F4F3F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +174,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		741AC15E29F09CAFA545405E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-telegramClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4711CE7857A43715D9F4F3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-telegramClone/Pods-telegramClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-telegramClone/Pods-telegramClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-telegramClone/Pods-telegramClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C0C49CD927B4F1C500A92FBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +224,11 @@
 				C0C49CE527B4F1C500A92FBF /* ViewController.swift in Sources */,
 				C0C49CE127B4F1C500A92FBF /* AppDelegate.swift in Sources */,
 				C0C49CE327B4F1C500A92FBF /* SceneDelegate.swift in Sources */,
+				C07FD6B027B66A880035600D /* mineControler.swift in Sources */,
+				C07FD6B227B66A9F0035600D /* register.swift in Sources */,
+				C07FD6B627B66AD90035600D /* infoFromLogin.swift in Sources */,
+				C07FD6B827B66AF70035600D /* help.swift in Sources */,
+				C07FD6B427B66ABC0035600D /* forgetPassword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +372,7 @@
 		};
 		C0C49CF227B4F1C500A92FBF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40C8EBD6473C17A98C2EB704 /* Pods-telegramClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +400,7 @@
 		};
 		C0C49CF327B4F1C500A92FBF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51E9531A45DCA5346BBEA9E8 /* Pods-telegramClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
