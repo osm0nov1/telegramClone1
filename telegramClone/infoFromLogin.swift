@@ -40,15 +40,20 @@ class InfoLogin: UIViewController {
         view.numberOfLines = 200
         view.textColor = UIColor.black
         view.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        view.autoresizesSubviews = true
+        
         
         return view
     }()
+    
+ 
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
+        
         
         
         view.addSubview(Exit)
@@ -71,4 +76,15 @@ class InfoLogin: UIViewController {
             make.top.equalTo(infoLogin.snp.bottom).offset(10)
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 }
+
+

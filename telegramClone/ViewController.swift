@@ -95,9 +95,32 @@ class ViewController: UIViewController {
     
     private lazy var loginLayout = UIView()
     
+    func validLogin(myLogin: String) -> Bool
+    {
+        let login =  ("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}")
+        let loginTesting = NSPredicate(format: "SELF MATCHES %@", login)
+        return loginTesting.evaluate(with: myLogin)
+    }
+    
     @objc func clickLogin(view: UIButton) {
         navigationController?.pushViewController(MainControoler(), animated: true)
         print("twrras")
+      
+        let login = validLogin(myLogin: emailEdit.text!)
+        let textpassword = passwordEdit.text!.count
+        
+        if (textpassword >= 7) && login{
+            navigationController?.pushViewController(MainControoler(), animated: true)
+            
+        }else {
+            let alertController = UIAlertController(title: "Error", message: "make sure the text is correct", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .cancel)
+            alertController.addAction(alertAction)
+            
+            self.present(alertController, animated: true)
+            
+        }
+        
     }
     
     @objc func clickRegister(view: UIButton) {
@@ -184,7 +207,17 @@ class ViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
 }
 
 
-   
+

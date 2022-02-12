@@ -13,6 +13,9 @@
 		C07FD6B427B66ABC0035600D /* forgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07FD6B327B66ABC0035600D /* forgetPassword.swift */; };
 		C07FD6B627B66AD90035600D /* infoFromLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07FD6B527B66AD90035600D /* infoFromLogin.swift */; };
 		C07FD6B827B66AF70035600D /* help.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07FD6B727B66AF70035600D /* help.swift */; };
+		C07FD6CA27B77EE60035600D /* custom1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07FD6C927B77EE60035600D /* custom1.swift */; };
+		C07FD6CC27B77EF90035600D /* second1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07FD6CB27B77EF80035600D /* second1.swift */; };
+		C07FD6CE27B77F0A0035600D /* masseges.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07FD6CD27B77F0A0035600D /* masseges.swift */; };
 		C0C49CE127B4F1C500A92FBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C49CE027B4F1C500A92FBF /* AppDelegate.swift */; };
 		C0C49CE327B4F1C500A92FBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C49CE227B4F1C500A92FBF /* SceneDelegate.swift */; };
 		C0C49CE527B4F1C500A92FBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C49CE427B4F1C500A92FBF /* ViewController.swift */; };
@@ -29,6 +32,9 @@
 		C07FD6B327B66ABC0035600D /* forgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgetPassword.swift; sourceTree = "<group>"; };
 		C07FD6B527B66AD90035600D /* infoFromLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoFromLogin.swift; sourceTree = "<group>"; };
 		C07FD6B727B66AF70035600D /* help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = help.swift; sourceTree = "<group>"; };
+		C07FD6C927B77EE60035600D /* custom1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = custom1.swift; sourceTree = "<group>"; };
+		C07FD6CB27B77EF80035600D /* second1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = second1.swift; sourceTree = "<group>"; };
+		C07FD6CD27B77F0A0035600D /* masseges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = masseges.swift; sourceTree = "<group>"; };
 		C0C49CDD27B4F1C500A92FBF /* telegramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = telegramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C49CE027B4F1C500A92FBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0C49CE227B4F1C500A92FBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +96,9 @@
 				C07FD6B327B66ABC0035600D /* forgetPassword.swift */,
 				C07FD6B527B66AD90035600D /* infoFromLogin.swift */,
 				C07FD6B727B66AF70035600D /* help.swift */,
+				C07FD6C927B77EE60035600D /* custom1.swift */,
+				C07FD6CB27B77EF80035600D /* second1.swift */,
+				C07FD6CD27B77F0A0035600D /* masseges.swift */,
 				C0C49CE627B4F1C500A92FBF /* Main.storyboard */,
 				C0C49CE927B4F1C500A92FBF /* Assets.xcassets */,
 				C0C49CEB27B4F1C500A92FBF /* LaunchScreen.storyboard */,
@@ -221,14 +230,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07FD6CE27B77F0A0035600D /* masseges.swift in Sources */,
 				C0C49CE527B4F1C500A92FBF /* ViewController.swift in Sources */,
 				C0C49CE127B4F1C500A92FBF /* AppDelegate.swift in Sources */,
 				C0C49CE327B4F1C500A92FBF /* SceneDelegate.swift in Sources */,
 				C07FD6B027B66A880035600D /* mineControler.swift in Sources */,
 				C07FD6B227B66A9F0035600D /* register.swift in Sources */,
 				C07FD6B627B66AD90035600D /* infoFromLogin.swift in Sources */,
+				C07FD6CA27B77EE60035600D /* custom1.swift in Sources */,
 				C07FD6B827B66AF70035600D /* help.swift in Sources */,
 				C07FD6B427B66ABC0035600D /* forgetPassword.swift in Sources */,
+				C07FD6CC27B77EF90035600D /* second1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

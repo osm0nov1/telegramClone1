@@ -4,38 +4,94 @@
 //
 //  Created by Rashit Osmonov on 11/2/22.
 //
-
-import Foundation
 import UIKit
+import SnapKit
 
-class MainControoler: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainControoler: UIViewController {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
-    }
+    private lazy var clickBack: UIButton = {
+        let view = UIButton()
+        view.backgroundColor = .white
+        view.setTitle("<Exit", for: .normal)
+        view.setTitleColor(.black, for: .normal)
+        view.addTarget(self, action: #selector(clickRegister(view:)), for: .touchUpInside)
+        return view
+        
+    }()
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "New message"
-        return cell
-    }
-    
-    private lazy var chasTable: UITableView = {
+    private lazy var tableView: UITableView = {
         let view = UITableView()
         view.delegate = self
         view.dataSource = self
         return view
     }()
+    @objc func clickRegister(view: UIButton){
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    
+    private lazy var messagePhoto: [UIImage] = []
+    private lazy var message2: [String] = []
     
     override func viewDidLoad() {
-        view.backgroundColor = .white
+        super.viewDidLoad()
         
-        view.addSubview(chasTable)
-        chasTable.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.bottom.equalToSuperview()
-            make.left.equalToSuperview()
-            make.right.equalToSuperview()
+        tableView.separatorColor = .black
+        tableView.separatorInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        
+        view.backgroundColor = .white
+        view.addSubview(clickBack)
+        clickBack.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(10)
+            make.left.equalToSuperview().offset(16)
         }
+        setupView()
+        setupConstraint()
+        
+    }
+    
+    private func setupView(){
+        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "CustomTableViewCell")
+        tableView.register(SecondCustomCell.self, forCellReuseIdentifier: "SecondCustomCell")
+    }
+    
+    private func setupConstraint(){
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(clickBack.snp.bottom)
+            make.width.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+        
     }
 }
+
+extension MainControoler: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messagePhoto.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let messagesController = MessagesController()
+        messagesController.title1.text = message2[indexPath.row]
+        messagesController.titlePhoto.image = messagePhoto[indexPath.row]
+        present(messagesController, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let index = indexPath.row
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as! CustomTableViewCell
+        cell.title1.text = message2[index]
+        cell.titlePhoto.image = messagePhoto[index]
+        return cell
+    }
+    
+    
+    
+}
+

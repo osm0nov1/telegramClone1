@@ -60,6 +60,40 @@ class Register: UIViewController {
         return view
         
     }()
+    func validLogin(myLogin: String) -> Bool
+    {
+        let login =  ("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}")
+        let loginTesting = NSPredicate(format: "SELF MATCHES %@", login)
+        return loginTesting.evaluate(with: myLogin)
+    }
+    
+    
+    
+    
+    
+    
+    @objc func clickRegister(view: UIButton){
+        let login = validLogin(myLogin: emaill.text!)
+        
+        let textpassword = emaill.text!.count
+        let repeatPassword = passwordSingIn.text! == repeatPassword.text!
+        let textCount = (nameOrLastName.text!.count != 0) && nameOrLastName.text!.count >= 7
+        
+        if (textpassword >= 7) && login && repeatPassword && textCount{
+            navigationController?.popToRootViewController(animated: true)
+            
+        }else {
+            let alertController = UIAlertController(title: "Error", message: "make sure the text is correct", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .cancel)
+            alertController.addAction(alertAction)
+            
+            self.present(alertController, animated: true)
+            
+            
+            
+        }
+        
+    }
     @objc func Done(view: UIButton) {
         navigationController?.pushViewController(ViewController(), animated: true)
         print("twrras")
@@ -113,5 +147,15 @@ class Register: UIViewController {
             make.height.equalTo(48)
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
 }
 

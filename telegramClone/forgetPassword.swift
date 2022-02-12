@@ -80,6 +80,39 @@ class ForgetPassword: UIViewController {
         self.present(alert, animated: true, completion: nil)
         
     }
+    func validLogin(myLogin: String) -> Bool
+    {
+        let login =  ("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}")
+        let loginTesting = NSPredicate(format: "SELF MATCHES %@", login)
+        return loginTesting.evaluate(with: myLogin)
+    }
+    
+    
+    @objc func clickLogin(view: UIButton){
+        let login = validLogin(myLogin: emaillForgeg.text!)
+        if login  {
+            let alert = UIAlertController(title: "успешно", message: "отправлено", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .default) {
+                UIAlertAction in
+                NSLog("OK Pressed")
+                self.navigationController?.pushViewController(ViewController(), animated: true)
+                print("test")
+            }
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+            
+        } else {
+            let alertController = UIAlertController(title: "Error", message: "make sure the text is correct", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .cancel)
+            alertController.addAction(alertAction)
+            
+            self.present(alertController, animated: true)
+            
+            
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,7 +151,17 @@ class ForgetPassword: UIViewController {
             
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 }
+
 
 
 
