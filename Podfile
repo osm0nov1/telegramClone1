@@ -7,7 +7,7 @@ target 'telegramClone' do
 
   # Pods for telegramClone
 
-     pod 'SnapKit'
+pod 'SnapKit'
 
 
 end
