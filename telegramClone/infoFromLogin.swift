@@ -31,7 +31,7 @@ class InfoLogin: UIViewController {
         return view
     }()
     @objc func Exit (view: UIButton) {
-        navigationController?.pushViewController(ViewController(), animated: true)
+        navigationController?.popViewController(animated: true)
         print("twrras")
     }
     private lazy var infoLogin2: UILabel = {
